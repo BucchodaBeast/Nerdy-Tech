@@ -7,19 +7,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Syne:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
 <style>
   :root {
-    --bg: #050a0f;
-    --bg2: #080f17;
-    --surface: #0d1a27;
-    --surface2: #112233;
-    --accent: #00d4ff;
-    --accent2: #7b2fff;
-    --accent3: #ff3cac;
-    --gold: #ffd166;
-    --text: #e8f4f8;
-    --text-muted: #6a8fa8;
-    --border: rgba(0,212,255,0.15);
-    --glow: 0 0 30px rgba(0,212,255,0.3);
-    --glow2: 0 0 30px rgba(123,47,255,0.3);
+    --bg: #0b0d0f;
+    --bg2: #0f1215;
+    --surface: #141719;
+    --surface2: #191d21;
+    --accent: #7eb8c9;
+    --accent2: #8a7ab5;
+    --accent3: #b07a8a;
+    --gold: #c4a96b;
+    --text: #d6dde3;
+    --text-muted: #5c6b76;
+    --border: rgba(126,184,201,0.12);
+    --glow: 0 0 30px rgba(126,184,201,0.15);
+    --glow2: 0 0 30px rgba(138,122,181,0.15);
   }
 
   *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -131,15 +131,15 @@
   .hero-bg {
     position: absolute; inset: 0;
     background: 
-      radial-gradient(ellipse 80% 60% at 70% 50%, rgba(123,47,255,0.12) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 80% at 20% 80%, rgba(0,212,255,0.08) 0%, transparent 60%),
-      radial-gradient(ellipse 40% 40% at 80% 10%, rgba(255,60,172,0.06) 0%, transparent 60%);
+      radial-gradient(ellipse 80% 60% at 70% 50%, rgba(138,122,181,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 20% 80%, rgba(126,184,201,0.05) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 40% at 80% 10%, rgba(176,122,138,0.04) 0%, transparent 60%);
   }
   .hero-grid {
     position: absolute; inset: 0;
     background-image: 
-      linear-gradient(rgba(0,212,255,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,212,255,0.04) 1px, transparent 1px);
+      linear-gradient(rgba(126,184,201,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(126,184,201,0.03) 1px, transparent 1px);
     background-size: 60px 60px;
   }
   .hero-grid::after {
@@ -628,7 +628,9 @@
   /* Marquee */
   .marquee-wrap {
     overflow: hidden;
-    background: linear-gradient(90deg, var(--accent2), var(--accent), var(--accent3));
+    background: linear-gradient(90deg, #1a1e24, #222830, #1a1e24);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
     padding: 12px 0;
   }
   .marquee-track {
@@ -641,10 +643,10 @@
     display: inline-flex; align-items: center; gap: 12px;
     font-family: 'Orbitron', monospace;
     font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em;
-    text-transform: uppercase; color: white;
+    text-transform: uppercase; color: var(--text-muted);
     padding: 0 30px;
   }
-  .marquee-dot { width: 4px; height: 4px; background: rgba(255,255,255,0.6); border-radius: 50%; }
+  .marquee-dot { width: 4px; height: 4px; background: var(--accent); opacity: 0.5; border-radius: 50%; }
 </style>
 </head>
 <body>
@@ -727,22 +729,8 @@
   </div>
   <div class="services-grid">
 
-    <!-- Gaming & PC -->
-    <div class="service-card">
-      <div class="service-icon">🎮</div>
-      <div class="service-name">PC GAMING SERVICES</div>
-      <p class="service-desc">Professional game installation, troubleshooting, and PC diagnostics. Get your setup running perfectly.</p>
-      <ul class="service-items">
-        <li><span>Game Installation</span><span class="price">E30</span></li>
-        <li><span>Clean Setup</span><span class="price">E50</span></li>
-        <li><span>Game Files Verification</span><span class="price">E20</span></li>
-        <li><span>PC Diagnostics</span><span class="price">E40</span></li>
-      </ul>
-      <a href="https://wa.me/26876368607?text=Hi%20Nerdy%20Techy!%20I'm%20interested%20in%20PC%20Gaming%20Services." class="service-cta" target="_blank">BOOK NOW →</a>
-    </div>
-
     <!-- Design -->
-    <div class="service-card v2">
+    <div class="service-card">
       <div class="service-icon">🎨</div>
       <div class="service-name">DESIGN SERVICES</div>
       <p class="service-desc">Eye-catching posters, flyers, and digital graphics that make your brand stand out.</p>
@@ -756,7 +744,7 @@
     </div>
 
     <!-- Docs -->
-    <div class="service-card v3">
+    <div class="service-card v2">
       <div class="service-icon">📄</div>
       <div class="service-name">DOCUMENTS &amp; CVs</div>
       <p class="service-desc">Professional CVs, resumes, cover letters, and business invoices crafted to impress.</p>
@@ -770,7 +758,7 @@
     </div>
 
     <!-- Office -->
-    <div class="service-card v4">
+    <div class="service-card v3">
       <div class="service-icon">💼</div>
       <div class="service-name">OFFICE SERVICES</div>
       <p class="service-desc">Reliable data entry, spreadsheet work, typing, and general office support services.</p>
@@ -781,6 +769,20 @@
         <li><span>Proofreading</span><span class="price">E25</span></li>
       </ul>
       <a href="https://wa.me/26876368607?text=Hi%20Nerdy%20Techy!%20I'm%20interested%20in%20Office%20Services." class="service-cta" target="_blank">ORDER NOW →</a>
+    </div>
+
+    <!-- PC Gaming (last) -->
+    <div class="service-card v4">
+      <div class="service-icon">🎮</div>
+      <div class="service-name">PC GAMING SERVICES</div>
+      <p class="service-desc">Professional game installation, troubleshooting, and PC diagnostics. Get your setup running perfectly.</p>
+      <ul class="service-items">
+        <li><span>Game Installation</span><span class="price">E30</span></li>
+        <li><span>Clean Setup</span><span class="price">E50</span></li>
+        <li><span>Game Files Verification</span><span class="price">E20</span></li>
+        <li><span>PC Diagnostics</span><span class="price">E40</span></li>
+      </ul>
+      <a href="https://wa.me/26876368607?text=Hi%20Nerdy%20Techy!%20I'm%20interested%20in%20PC%20Gaming%20Services." class="service-cta" target="_blank">BOOK NOW →</a>
     </div>
 
   </div>
@@ -879,7 +881,7 @@
           <a class="wa-btn" href="https://wa.me/26876368607?text=Hi%20Nerdy%20Techy!%20I'd%20like%20to%20enquire%20about%20your%20services." target="_blank">
             <div class="wa-btn-icon">📱</div>
             <div class="wa-btn-info">
-              <div class="wa-btn-label">Team Member 1</div>
+              <div class="wa-btn-label">Buccho</div>
               <div class="wa-btn-num">+268 76 368 607</div>
             </div>
             <div class="wa-btn-arrow">→</div>
@@ -887,7 +889,7 @@
           <a class="wa-btn" href="https://wa.me/26879542590?text=Hi%20Nerdy%20Techy!%20I'd%20like%20to%20enquire%20about%20your%20services." target="_blank">
             <div class="wa-btn-icon">📱</div>
             <div class="wa-btn-info">
-              <div class="wa-btn-label">Team Member 2</div>
+              <div class="wa-btn-label">Smally</div>
               <div class="wa-btn-num">+268 79 542 590</div>
             </div>
             <div class="wa-btn-arrow">→</div>
@@ -895,7 +897,7 @@
           <a class="wa-btn" href="https://wa.me/26879659483?text=Hi%20Nerdy%20Techy!%20I'd%20like%20to%20enquire%20about%20your%20services." target="_blank">
             <div class="wa-btn-icon">📱</div>
             <div class="wa-btn-info">
-              <div class="wa-btn-label">Team Member 3</div>
+              <div class="wa-btn-label">Blaze</div>
               <div class="wa-btn-num">+268 79 659 483</div>
             </div>
             <div class="wa-btn-arrow">→</div>
@@ -997,9 +999,9 @@
 <div class="floating-wa">
   <div class="wa-popup" id="waPopup">
     <div class="wa-popup-title">💬 Chat with us</div>
-    <a class="wa-popup-btn" href="https://wa.me/26876368607?text=Hi%20Nerdy%20Techy!" target="_blank">📱 +268 76 368 607</a>
-    <a class="wa-popup-btn" href="https://wa.me/26879542590?text=Hi%20Nerdy%20Techy!" target="_blank">📱 +268 79 542 590</a>
-    <a class="wa-popup-btn" href="https://wa.me/26879659483?text=Hi%20Nerdy%20Techy!" target="_blank">📱 +268 79 659 483</a>
+    <a class="wa-popup-btn" href="https://wa.me/26876368607?text=Hi%20Nerdy%20Techy!" target="_blank">📱 Buccho · +268 76 368 607</a>
+    <a class="wa-popup-btn" href="https://wa.me/26879542590?text=Hi%20Nerdy%20Techy!" target="_blank">📱 Smally · +268 79 542 590</a>
+    <a class="wa-popup-btn" href="https://wa.me/26879659483?text=Hi%20Nerdy%20Techy!" target="_blank">📱 Blaze · +268 79 659 483</a>
   </div>
   <button class="wa-fab" onclick="toggleWa()">💬</button>
 </div>
